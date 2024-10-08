@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-wvv0UGcQHJ/jMG+RsTrM+hvPhSd/IxjiX+J86RVWGL3Egr10aZ3MEeQ5XQe3GLm2BaRaezM3uND4g+ZFQ1h3HA==" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Prompt Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <div class="nav-heading">Now Playing</div>
+        <div class="nav-icons">
+            <i class="ri-search-line"></i>
+            <i class="ri-volume-down-line"></i>
+            <i class="ri-volume-mute-line"></i>
+            <i class="ri-heart-add-line"></i>
+            <i class="ri-restart-line"></i>
+        </div>
+    </nav>
+    <p class="sub-heading">Enjoy your favorite tunes</p>
+    <marquee behavior="scroll" direction="left">
+        <i class="ri-music-2-line"></i><i class="ri-music-fill"></i><i class="ri-album-fill"></i><i class="ri-netease-cloud-music-line"></i>
+        Daku Ik Jeep Khadi Meri Thane De - Download Similar MP3/M4R
+        <i class="ri-music-2-line"></i><i class="ri-music-fill"></i><i class="ri-album-fill"></i><i class="ri-netease-cloud-music-line"></i>
+    </marquee>
+    <img src="/60a3f0e391394bb89b14dbeb298683d7-removebg-preview.png" alt="">
+    
+    <div class="player-controls">
+        <button class="control-button" id="prevBtn">Prev</button>
+        <button class="control-button play-button" id="playBtn">Play</button>
+        <button class="control-button" id="nextBtn">Next</button>
+    </div>
+    
+    <audio id="audioPlayer" src="/aaaaaaa.mp3" loop></audio>
+</div>
+
+
+
+<script>
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playBtn = document.getElementById('playBtn');
+
+    playBtn.addEventListener('click', function() {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playBtn.textContent = 'Pause';
+        } else {
+            audioPlayer.pause();
+            playBtn.textContent = 'Play';
+        }
+    });
+</script>
+
+</body>
+</html>
